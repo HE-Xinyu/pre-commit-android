@@ -1,0 +1,8 @@
+- id: kotlin-formatter
+  name: ktlint
+  description: ktlint
+  entry: ktlint
+  language: python
+  types: [kotlin]
+  files: ^.+\.kt$
+  pass_filenames: false
