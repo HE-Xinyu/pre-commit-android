@@ -5,7 +5,7 @@ pre-commit hooks for Android Kotlin
 As a nerd coder, I would like my code to be as clean as possible. 
 Although Android Studio has the neat feature that [can automatically format all the 
 files for me](https://stackoverflow.com/questions/40926920/reformat-whole-project-files-in-android-studio),
-it has several fallbacks:
+it has several drawbacks:
 
 - It is impossible for me to do it **manually** before every commit.
 - It does not follow the [Android Kotlin style guide](https://developer.android.com/kotlin/style-guide) carefully.
@@ -41,7 +41,7 @@ Open a **new** shell and run `java -version` to assure it works.
         -   id: check-yaml
         -   id: check-xml
     -   repo: https://github.com/HE-Xinyu/pre-commit-android
-        rev: 4bd5eabad155f10b2ad74e80a6d0eeb4b53d9284
+        rev: master
         hooks:
         -   id: kotlin-formatter
     ```
