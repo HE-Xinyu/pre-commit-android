@@ -25,7 +25,8 @@ def download_ktlint_if_not_found():
         return
     r = requests.get(DOWNLOAD_URL.format(KTLINT_VER), stream=True)
     with open(KTLINT_TMP, "wb") as f:
-        f.write(r.raw)
+        for chunk in r.iter_content(chunk_size=128):
+            f.write(chunk)
 
     os.rename(KTLINT_TMP, KTLINT_JAR)
 
