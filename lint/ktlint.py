@@ -33,7 +33,7 @@ def download_ktlint_if_not_found():
 
 def run_ktlint():
     download_ktlint_if_not_found()
-    ret_code, output = run_command("java -jar " + KTLINT_JAR + " --format")
+    ret_code, output = run_command("java -jar " + KTLINT_JAR + " --format --android")
     if output:
         print(output)
         return 1
